@@ -16,6 +16,18 @@ header#amazon_header{position:relative; width:100%; min-width:900px; height:55vh
 	#gnb>ul>li.active>a{color:#333;}
 		#navigator{position:absolute; top:0; left:0; width:200px; height:60px; border-radius:30px; border:9px solid #7f950e; box-sizing:border-box;}
 /*--------------------------------------
+---------------FAG start---------------- fixed FAQ버튼 디자인
+--------------------------------------*/
+#faq_btn{position:fixed; width:100px; height:100px; animation:faqhover 1.6s infinite; left:100px; bottom:100px; border-radius:50px; background:#ba3131; transition:0.5s; cursor:pointer; transform-origin:50% 50%; transform:scale(0,0); z-index:99999;}
+	@keyframes faqhover{
+		0%{box-shadow:0 0 0 1px rgba(255,255,255,0.4);}
+		50%{box-shadow:0 0 0 8px rgba(255,255,255,0.4);}
+		100%{box-shadow:0 0 0 1px rgba(255,255,255,0.4);}
+	}
+#faq_btn:hover{animation-play-state:paused;}
+#faq_btn>h2{width:100px; text-align:center; line-height:100px; color:#fff; letter-spacing:2px;}
+
+/*--------------------------------------
 --------------stem start---------------- 헤더 상단 덩쿨들
 --------------------------------------*/
 	.stem{position:absolute; width:100%; top:0; z-index:300}
@@ -56,7 +68,6 @@ header#amazon_header{position:relative; width:100%; min-width:900px; height:55vh
 			50% {transform: rotate(10deg)}
 			100% {transform: rotate(0deg)}
 		}
-
 /*--------------------------------------
 --------------leafR start--------------- 헤더 오른쪽 잎사귀들
 --------------------------------------*/
@@ -80,15 +91,14 @@ header#amazon_header{position:relative; width:100%; min-width:900px; height:55vh
 			50% {transform: rotate(8deg)}
 			100% {transform: rotate(5deg)}
 		}
-
 /*--------------------------------------
 --------------bush start--------------- 헤더 가운데 덤불들
 --------------------------------------*/
 	.bush{position:absolute; width:100%; height:55vh; top:0; right:0;}
-	.bush>img{position:absolute; width:50%; bottom:-300px;}
+	.bush>img{position:absolute; width:65%; bottom:-300px;}
 	.bush>img:nth-of-type(1){}
-	.bush>img:nth-of-type(2){right:0;}
-	.bush>img:nth-of-type(3){left:15%;}
+	.bush>img:nth-of-type(2){width:60%; right:0;}
+	.bush>img:nth-of-type(3){width:55%; left:10%;}
 
 /*--------------------------------------
 --------------wave start---------------- 헤더 파도 움직임
@@ -117,7 +127,7 @@ section#amazon_section{position:relative; width:100%; height:2000px; background-
 	.fish:hover+div{display:block;}
 	.fish{position:absolute; width:180px; top:300px left:10px; cursor:pointer; animation:fish 10s infinite;}
 	.fish>img{width:100%;}
-	.info{display:none; position:absolute; width:300px; top:-150px; background:#fff; height:150px; border-radius:20px;}
+	.info{display:none; position:absolute; width:300px; top:-150px; background:#fff; height:150px; border-radius:20px;  animation:fish 10s infinite;}
 		@keyframes fish{
 			0% {left:10px;}
 			49% {transform:rotateY(0deg);}

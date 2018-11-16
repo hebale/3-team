@@ -1,6 +1,5 @@
 
 $(window).scroll(function(){    // 스크롤이 일정 구간 지나면 gnb fixed
-	
 	var scroll_top = $(window).scrollTop();
 	console.log(scroll_top);
 	if(scroll_top >= 120){
@@ -10,6 +9,9 @@ $(window).scroll(function(){    // 스크롤이 일정 구간 지나면 gnb fixe
 		$("#gnb").css({position:"relative",top:120,left:"none",marginLeft:"none"});
 		$("#gnb").stop().animate({borderTopRightRadius:30,borderTopLeftRadius:30},300)
 	}
+
+	if(scroll_top >= 500) $("#faq_btn").css("transform","scale(1,1)");  // FAQ 버튼 등장
+	if(scroll_top < 500) $("#faq_btn").css("transform","scale(0,0)");	// FAQ 버튼 사라짐
 })
 
 $(function(){
@@ -40,8 +42,9 @@ $(function(){
 		}
 	})
 	/*--------------------------------------
-	----------------gnb end-----------------
+	----------------FAQ start---------------
 	--------------------------------------*/
+
 
 
 	/*--------------------------------------------------
@@ -60,7 +63,7 @@ $(function(){
 	----------------amazon bush start------------------- 아마존 헤더 덤불 음직임 for구문 각각 딜레이 적용
 	--------------------------------------------------*/
 	for(var i=0; i<$(".bush>img").length; i++){
-		$(".bush>img").eq(i).delay(300*i).animate({bottom:-30},700,"easeOutBack");
+		$(".bush>img").eq(i).delay(300*i).animate({bottom:-10},700,"easeOutBack");
 	};
 	bushSetint(); // 헤더 중앙 덤블 움직임 호출
 
