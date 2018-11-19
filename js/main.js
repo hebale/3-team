@@ -4,10 +4,10 @@ $(window).scroll(function(){    // 스크롤이 일정 구간 지나면 gnb fixe
 	console.log(scroll_top);
 	if(scroll_top >= 120){
 		$("#gnb").css({position:"fixed",top:0,left:"50%",marginLeft:-450});
-		$("#gnb").stop().animate({borderTopRightRadius:0,borderTopLeftRadius:0},300)
+		$("#gnb").stop().animate({borderTopRightRadius:0,borderTopLeftRadius:0},300);
 	}else{
 		$("#gnb").css({position:"relative",top:120,left:"none",marginLeft:"none"});
-		$("#gnb").stop().animate({borderTopRightRadius:30,borderTopLeftRadius:30},300)
+		$("#gnb").stop().animate({borderTopRightRadius:30,borderTopLeftRadius:30},300);
 	}
 
 	if(scroll_top >= 500) $("#faq_btn").css("transform","scale(1,1)");  // FAQ 버튼 등장
